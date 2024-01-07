@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/signup.css">
     <title>E-commerce Website-ORRIN</title>
 </head>
+
 <body>
     <div class="container">
         <!-- banner -->
@@ -25,10 +27,10 @@
         <!-- navbar -->
         <div class="navbar ">
             <div class="nav-heading">
-                <h2>Exclusive</h2>
+                <h2>E-Commerce Store</h2>
             </div>
             <div class="nav-icons">
-                <i class='bx bx-x cross' ></i>
+                <i class='bx bx-x cross'></i>
                 <ul class="nav-icons-ul">
                     <li class="nav-icons-li active">Home</li>
                     <li class="nav-icons-li">Contact</li>
@@ -38,14 +40,57 @@
             </div>
             <div class="nav-search">
                 <input type="search" name="navsearch" id="navsearch" placeholder="What are you looking for?">
-                <i class='bx bx-search-alt-2' ></i>
+                <i class='bx bx-search-alt-2'></i>
             </div>
             <div class="nav-active-icons">
-                <i class='bx bx-menu menu' ></i>
-                
+                <i class='bx bx-menu menu'></i>
+
+            </div>
+        </div>
+        <!-- main section -->
+        <div class="main">
+            <div class="left">
+                <img src="../assets/background.png" alt="">
+            </div>
+            <div class="right flag">
+                <div class="wrapper">
+                    <form class="form-container signup">
+                        <div>
+                            <h3>Create an account</h3>
+                            <p>Enter your details below</p>
+                        </div>
+                        <div><input type="text" name="name" id="name" placeholder="Name"></div>
+                        <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
+                        </div>
+                        <div><input type="password" name="password" id="password" placeholder="Password"></div>
+                        <div class="btn btn1"><button>Create Account</button></div>
+                        <div class="btn btn2"><button><img src="../assets/googlelogo.png">Sign up with Google</button>
+                        </div>
+                        <div>
+                            <p>Already have account? <a href="#" id="login">Log in</a></p>
+                        </div>
+                    </form>
+
+                    <form class="form-container login">
+                        <div>
+                            <h3>Log in to Account</h3>
+                            <p>Enter your details below</p>
+                        </div>
+                        <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
+                        </div>
+                        <div><input type="password" name="password" id="password" placeholder="Password"></div>
+                        <div class="btn btn1 btn1login"><button>Login</button>
+                            <p>Forget Password ?</p>
+                        </div>
+                        <div>
+                            <p>Don't have account? <a href="#" id="signup">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <script src="../js/script.js"></script>
 </body>
+
 </html>

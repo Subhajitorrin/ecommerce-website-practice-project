@@ -148,7 +148,7 @@ body {
         background-color: black;
         height: 98.1vh;
         width: 50vw;
-        background: rgba(115, 0, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
         padding: 20px;
         overflow-y: hidden;
@@ -182,5 +182,118 @@ body {
     }
     .nav-icons{
         transition: all 0.3s ease;
+    }
+}
+
+/* main section */
+.main{
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 89.8vh;
+}
+.right{
+    height: 89.8vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.form-container h3{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+.form-container p{
+    font-size: 1rem;
+}
+.form-container input{
+    width: 21.6rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(181, 179, 179);
+    background-color: transparent;
+    font-size: .9rem;
+}
+.btn button{
+    border: none;
+    height: 3rem;
+    width: 21.6rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn1 button{
+    background-color: #db4444;
+    color: white;
+}
+.btn2 button{
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn2 img{
+    height: 30px;
+}
+.btn1login button{
+    width: 8rem;
+}
+.btn1login{
+    /* border: 1px solid black; */
+    width: 21.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3;
+}
+.login{
+    position: absolute;
+    transform:translateX(100%);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    transition: all ease 1s;
+}
+.login{
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    margin-left: 10px;
+}
+.signup{
+    transition: all ease-in-out 1s;
+}
+.left{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+    height: 500px;
+}
+@media only screen and (max-width: 1000px) {
+    .left{
+        display: none;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container h3{
+        font-size: 2.3rem;
     }
 }
