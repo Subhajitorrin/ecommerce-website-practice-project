@@ -448,8 +448,37 @@ body {
 /* cart section end */
 
 /* home page main section */
-.main{
-    height: 100vh;
+.home-main{
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.home-cards{
+    height: 350px;
+    width: 250px;
+    /* background-color: lightseagreen; */
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.home-img-container img{
+    width: 300px;
+}
+.add-to-cart-btn{
+    font-size: 1.2rem;
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightcoral;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.home-product-name{
+    max-width: 15rem;
 }
 /* home page main section end */
