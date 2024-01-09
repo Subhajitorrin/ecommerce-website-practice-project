@@ -58,6 +58,7 @@
                 let card = createProductCard(data[i].img, data[i].name, data[i].price);
                 homeMainSection.appendChild(card);
             }
+            getDataOfHomeCards();
         })
 
     //   function to create product cards
@@ -91,4 +92,53 @@
 
         return cardContainer;
     }
+}
+
+
+// add to cart
+{
+    function getDataOfHomeCards() {
+        let homeCards = document.querySelectorAll(".home-cards")
+        homeCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                let details=getHomeProductDetails(card);
+                // let cartCardsParent=document.querySelector("#cartCardsParent");
+                appendCardCart(details.imgSrc,details.name,details.price)
+            })
+        })
+    }
+}
+
+// append cart cards [append child to left]
+function appendCardCart(img, name, price) {
+    // Create card container
+    var card = document.createElement("div");
+    card.classList.add("card");
+
+    // Create card content
+    card.innerHTML = `
+        <div class="card-img-name-container">
+            <div class="card-img-container"><img src="${img}" alt=""></div>
+            <div class="prodname">${name}</div>
+        </div>
+        <div class="card-cross">
+            <p class="price"><b>${price}INR</b></p>
+            <div><i class='bx bx-x'></i></div>
+        </div>
+    `;
+
+    // Append the card to the container
+    document.querySelector("#cartCardsParent").appendChild(card);
+}
+
+// get img name price of home product
+function getHomeProductDetails(card) {
+    var imgContainer = card.querySelector(".home-img-container");
+    var imgElement = imgContainer.querySelector("img");
+    var imgSrc = imgElement.src;
+
+    let name = card.querySelector(".home-product-name").innerText;
+
+    let price = card.querySelector(".home-product-price").innerText;
+    return { imgSrc, name, price };
 }
