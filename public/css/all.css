@@ -403,7 +403,7 @@ body {
     padding: 0 20px;
 }
 .right .price-wrapper{
-    width: 30rem;
+    width: 100%;
     /* background-color: rgb(245, 245, 245); */
     padding: 40px;
     border-radius: 20px;
