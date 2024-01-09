@@ -8,7 +8,15 @@ const publicPath = path.join(__dirname, './public');
 app.use(express.static(publicPath));
 
 app.get('/', (req, res) => {
+    let htmlpath = path.join(publicPath, 'html/home.html');
+    res.sendFile(htmlpath);
+});
+app.get('/signup', (req, res) => {
     let htmlpath = path.join(publicPath, 'html/signup.html');
+    res.sendFile(htmlpath);
+});
+app.get('/login', (req, res) => {
+    let htmlpath = path.join(publicPath, 'html/login.html');
     res.sendFile(htmlpath);
 });
 
