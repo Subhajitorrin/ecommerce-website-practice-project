@@ -67,9 +67,27 @@
     },
     {
       "product_id": "4",
-      "name": "ASUS ROG Flow X13 (2022), 13.4 (34.03 cm) FHD+ 16:10, 120Hz Touch",
+      "name": "ASUS ROG Flow X13 (2022), 13.4 (34.03 cm) FHD+ 16:10",
       "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61mI-ghw8mL._SL1200_.jpg",
       "price": 113571
+    },
+    {
+      "product_id": "4",
+      "name": "Lenovo IdeaPad Slim 5 Intel Core i5 13500H 16(40.6cm)",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61wLTc0YixL._SL1080_.jpg",
+      "price": 70190
+    },
+    {
+      "product_id": "4",
+      "name": "Lenovo Yoga Slim 6 Intel Evo Core i5 1240P",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61PM7JLOZGL.jpg",
+      "price": 64990
+    },
+    {
+      "product_id": "4",
+      "name": "Lenovo IdeaPad Gaming 3 AMD Ryzen 5 5500H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61PeZXpc5-L._SL1080_.jpg",
+      "price": 49990
     }
   ]
   
