@@ -96,7 +96,10 @@ body {
     color: black;
     padding-right: 40px;
 }
-
+.cart-user-container a{
+    color: black;
+    text-decoration: none;
+}
 .nav-icons a {
     text-decoration: none;
     color: black;
@@ -329,3 +332,115 @@ body {
     justify-content: center;
 }
 /* footer end */
+
+/* cart section start*/
+.cart-main-section{
+    width: 100%;
+    height: 66.7vh;
+    display: flex;
+}
+.cart-main-section .left{
+    width: 60%;
+    height: 100%;
+    /* background-color: lightblue; */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.cart-main-section .right{
+    width: 40%;
+    height: 100%;
+    /* background-color: lightgreen; */
+}
+.cart-main-section .card{
+    /* border: 1px solid black; */
+    /* background-color: lightcoral; */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-img-container{
+    /* background-color: red; */
+    width: 130px;
+}
+.card-img-container img{
+    width: 100%;
+}
+.card-img-name-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.prodname{
+    font-weight: bold;
+    /* background-color: green; */
+    max-width: 40rem;
+}
+.card{
+    margin: 10px 0;
+}
+@media (max-width: 1000px) {
+    .cart-main-section{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .cart-main-section .left{
+        width: 100%;
+        height: 90rem;
+    }
+    .cart-main-section .right{
+        width: 100%;
+    }
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.right .price-wrapper{
+    width: 30rem;
+    /* background-color: rgb(245, 245, 245); */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgb(229, 229, 229);
+}
+.price-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.price-wrapper li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.total-cost-gap{
+    margin-top: 50px;
+}
+.right .payment{
+    margin-bottom: 30px;
+}
+.payment button{
+    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* cart section end */
+
+/* home page main section */
+.main{
+    height: 100vh;
+    width: 100%;
+}
+/* home page main section end */
