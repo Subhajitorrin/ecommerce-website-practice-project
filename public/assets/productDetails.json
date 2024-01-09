@@ -1,9 +1,75 @@
 [
     {
       "product_id": "1",
-      "name": "HP Victus Gaming Laptop",
+      "name": "HP Victus Gaming Laptop 12th Gen Intel Core i5-12450H",
       "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71h9nOTd93L._SL1500_.jpg",
       "price": 60990
+    },
+    {
+      "product_id": "2",
+      "name": "Acer Predator Helios Neo 16 Gaming Laptop",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81E2srXhKVL._SL1500_.jpg",
+      "price": 119990
+    },
+    {
+      "product_id": "3",
+      "name": "HP Omen Gaming Laptop,AMD Ryzen 7",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71hof8-PQDL._SL1500_.jpg",
+      "price": 116990
+    },
+    {
+      "product_id": "4",
+      "name": "ASUS TUF Gaming F15 - AI Powered Gaming Laptop",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71-Fx3Vfq5L._SL1500_.jpg",
+      "price": 53490
+    },
+    {
+      "product_id": "4",
+      "name": "MSI Sword 15 A12VF, Intel 12th Gen. i7-12650H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71cRA3lD-8L._SL1500_.jpg",
+      "price": 105990
+    },
+    {
+      "product_id": "4",
+      "name": "MSI Bravo 15 Gaming Laptop,AMD Ryzen 5 7535HS",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61PrdKgYaYL._SL1500_.jpg",
+      "price": 54990
+    },
+    {
+      "product_id": "4",
+      "name": "Lenovo IdeaPad Gaming 3 Intel Core i5-11320H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61H5nnM7ZBL._SL1080_.jpg",
+      "price": 54990
+    },
+    {
+      "product_id": "4",
+      "name": "MSI GF63 Thin, Intel 11th Gen. i7-11800H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71odFxm6AQL._SL1500_.jpg",
+      "price": 61990
+    },
+    {
+      "product_id": "4",
+      "name": "ASUS TUF Gaming F15, 15.6 (39.62 cms FHD Hz",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81UWgnVKDBL._SL1500_.jpg",
+      "price": 79120
+    },
+    {
+      "product_id": "4",
+      "name": "Acer Nitro V Gaming Laptop 13th Gen Intel Core i5-13420H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/516qCPpFXkL._SL1280_.jpg",
+      "price": 79990
+    },
+    {
+      "product_id": "4",
+      "name": "Dell G15 5520 Gaming Laptop, Intel i5-12500H",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/51rEPuvNYFL._SL1080_.jpg",
+      "price": 77490
+    },
+    {
+      "product_id": "4",
+      "name": "ASUS ROG Flow X13 (2022), 13.4 (34.03 cm) FHD+ 16:10, 120Hz Touch",
+      "img": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/61mI-ghw8mL._SL1200_.jpg",
+      "price": 113571
     }
   ]
   
