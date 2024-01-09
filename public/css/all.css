@@ -436,6 +436,15 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
+.card-cross{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card-cross i{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
 /* cart section end */
 
 /* home page main section */

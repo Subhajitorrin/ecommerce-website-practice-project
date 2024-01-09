@@ -1,34 +1,41 @@
-let menubtn= document.querySelector('.menu');
-menubtn.addEventListener('click',()=>{
-    let navbar=document.querySelector('.navbar');
-    navbar.classList.add('active-navbar');
-})
-let crossbtn= document.querySelector('.cross');
-crossbtn.addEventListener('click',()=>{
-    let navbar=document.querySelector('.navbar');
-    navbar.classList.remove('active-navbar');
-})
+// menu button click
+{
+    let menubtn = document.querySelector('.menu');
+    menubtn.addEventListener('click', () => {
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.add('active-navbar');
+    })
+    let crossbtn = document.querySelector('.cross');
+    crossbtn.addEventListener('click', () => {
+        let navbar = document.querySelector('.navbar');
+        navbar.classList.remove('active-navbar');
+    })
+}
 
-// move signup and login
-let login=document.querySelector("#login");
-login.addEventListener('click',()=>{
-    let wrapper=document.querySelector(".wrapper");
-    wrapper.style.transform = 'translateX(-102%)';
 
-    let signup=document.querySelector(".signup");
-    signup.style.opacity=0;
+// price calculation
+{
+    function priceCalculationOfCart() {
+        let price = document.querySelectorAll('.price');
+        let totalPrice = 0
+        for (let i = 0; i < price.length; i++) {
+            numeric_part = Number(price[i].innerText.slice(0, -3));
+            totalPrice = totalPrice + numeric_part;
+        }
+        let totalPriceShow = document.querySelector(".totalPriceShow")
+        let shopingCostShow = document.querySelector(".shopping-cost-show")
+        totalPriceShow.innerHTML = `<b>${totalPrice}</b>`;
+        shopingCostShow.innerHTML = `<b>${totalPrice}</b>`;
+    }
+    priceCalculationOfCart();
 
-    let login=document.querySelector(".login");
-    login.style.opacity='100%';
-})
-let signup=document.querySelector("#signup");
-signup.addEventListener('click',()=>{
-    let wrapper=document.querySelector(".wrapper");
-    wrapper.style.transform = 'translateX(0%)';
-
-    let signup=document.querySelector(".signup");
-    signup.style.opacity='100%';
-
-    let login=document.querySelector(".login");
-    login.style.opacity=0;
-})
+    // remove card
+    let cardCrossList = document.querySelectorAll('.card-cross')
+    cardCrossList.forEach(function (cardCross) {
+        cardCross.addEventListener('click', (e) => {
+            let card = cardCross.parentElement;
+            card.remove();
+            priceCalculationOfCart();
+        })
+    });
+}
