@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/all.css">
+    <title>E-commerce Website-ORRIN</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Banner -->
+        <%- include('partials/banner') %>
+
+            <!-- Navbar -->
+            <%-include('partials/navbar') %>
+
+                <!-- cart main Section -->
+                <div class="cart-main-section">
+                    <div class="left" id="cartCardsParent">
+
+                        <!-- cards start -->
+                        <div class="card">
+                            <div class="card-img-name-container">
+                                <div class="card-img-container"><img
+                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
+                                        alt=""></div>
+                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
+                            </div>
+                            <div class="card-cross">
+                                <p class="price"><b>310INR</b></p>
+                                <div><i class='bx bx-x'></i></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-name-container">
+                                <div class="card-img-container"><img
+                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
+                                        alt=""></div>
+                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
+                            </div>
+                            <div class="card-cross">
+                                <p class="price"><b>120INR</b></p>
+                                <div><i class='bx bx-x'></i></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-name-container">
+                                <div class="card-img-container"><img
+                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
+                                        alt=""></div>
+                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
+                            </div>
+                            <div class="card-cross">
+                                <p class="price"><b>340INR</b></p>
+                                <div><i class='bx bx-x'></i></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-name-container">
+                                <div class="card-img-container"><img
+                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
+                                        alt=""></div>
+                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
+                            </div>
+                            <div class="card-cross">
+                                <p class="price"><b>320INR</b></p>
+                                <div><i class='bx bx-x'></i></div>
+                            </div>
+                        </div>
+
+                        <!-- cards end -->
+                    </div>
+                    <div class="right">
+                        <div class="price-wrapper">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <h3>Shopping Cost</h3>
+                                    </li>
+                                    <li>Discount Amount</li>
+                                    <li>Tax Amount</li>
+                                    <li class="total-cost-gap">
+                                        <h3>Total Cost</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li class="shopping-cost-show">
+                                        <h3>2000</h3>
+                                    </li>
+                                    <li>0</li>
+                                    <li>0</li>
+                                    <li class="total-cost-gap totalPriceShow">
+                                        <h3>2000</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="payment">
+                            <a href="/payment"><button>Proceed to payment</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer section -->
+                <%- include('partials/footer') %>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../mongodb.js"></script>
+</body>
+
+</html>

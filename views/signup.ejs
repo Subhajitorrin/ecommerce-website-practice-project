@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/all.css">
+    <title>E-commerce Website-ORRIN</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Banner -->
+        <%- include('partials/banner') %>
+
+        <!-- Navbar -->
+        <%-include('partials/navbar') %>
+
+        <!-- Main Section -->
+        <div class="main">
+            <form class="form-container signup">
+                <!-- Form Content -->
+                <div>
+                    <h3>Create an account</h3>
+                    <p>Enter your details below</p>
+                </div>
+                <div><input type="text" name="name" id="name" placeholder="Name"></div>
+                <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
+                </div>
+                <div><input type="password" name="password" id="password" placeholder="Password"></div>
+                <div class="btn btn1"><button>Create Account</button></div>
+                <div class="btn btn2"><button><img src="../assets/googlelogo.png">Sign up with Google</button>
+                </div>
+                <div>
+                    <p>Already have account? <a href="/login" id="login">Log in</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- footer section -->
+        <%- include('partials/footer') %>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

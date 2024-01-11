@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/all.css">
+    <title>E-commerce Website-ORRIN</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Banner -->
+        <%- include('partials/banner') %>
+
+            <!-- Navbar -->
+            <%-include('partials/navbar') %>
+
+                <!-- Main Section -->
+                <div class="main">
+                    <form class="form-container">
+                        <!-- Form Content -->
+                        <div>
+                            <h3>Log in to Account</h3>
+                            <p>Enter your details below</p>
+                        </div>
+                        <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
+                        </div>
+                        <div><input type="password" name="password" id="password" placeholder="Password"></div>
+                        <div class="btn btn1 btn1login ">
+                            <button>Login</button>
+                            <p class="fixforget">Forget Password ?</p>
+                        </div>
+                        <div>
+                            <p>Don't have account? <a href="/signup" id="signup">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- footer section -->
+                <%- include('partials/footer') %>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
