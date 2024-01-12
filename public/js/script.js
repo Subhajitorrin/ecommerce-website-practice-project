@@ -63,6 +63,10 @@
 
     //   function to create product cards
     function createProductCard(img, name, price) {
+        const formElement = document.createElement('form');
+        formElement.action = '/db';
+        formElement.method = 'post';
+
         const cardContainer = document.createElement('div');
         cardContainer.className = 'home-cards';
 
@@ -70,6 +74,7 @@
         imgContainer.className = 'home-img-container';
         const imgElement = document.createElement('img');
         imgElement.src = img;
+        imgElement.classList.add("imgSrc");
         imgContainer.appendChild(imgElement);
 
         const productNameElement = document.createElement('div');
@@ -77,12 +82,12 @@
         productNameElement.innerHTML = `<b>${name}</b>`;
 
         const productPriceElement = document.createElement('div');
-        productPriceElement.className = 'home-product-price';
         productPriceElement.textContent = price;
 
-        const addToCartBtn = document.createElement('button');
+        const addToCartBtn = document.createElement('input');
+        addToCartBtn.type = 'submit';
+        addToCartBtn.value = 'Add to cart';
         addToCartBtn.className = 'add-to-cart-btn';
-        addToCartBtn.textContent = 'Add to cart';
 
         // Append elements to the card container
         cardContainer.appendChild(imgContainer);
@@ -90,8 +95,33 @@
         cardContainer.appendChild(productPriceElement);
         cardContainer.appendChild(addToCartBtn);
 
-        return cardContainer;
+        formElement.appendChild(cardContainer);
+
+        // hidden inputs
+        // productimage link
+        const hiddenInputImg = document.createElement('input');
+        hiddenInputImg.type = 'hidden';
+        hiddenInputImg.name = 'imgSrc';
+        hiddenInputImg.value = imgElement.src;
+        formElement.appendChild(hiddenInputImg)
+
+        // product name
+        const hiddenInputName = document.createElement('input');
+        hiddenInputName.type = 'hidden';
+        hiddenInputName.name = 'productName';
+        hiddenInputName.value = productNameElement.innerText;
+        formElement.appendChild(hiddenInputName)
+
+        // product price
+        const hiddenInputPrice = document.createElement('input');
+        hiddenInputPrice.type = 'hidden';
+        hiddenInputPrice.name = 'price';
+        hiddenInputPrice.value = productPriceElement.textContent;
+        formElement.appendChild(hiddenInputPrice)
+
+        return formElement;
     }
+
 }
 
 
