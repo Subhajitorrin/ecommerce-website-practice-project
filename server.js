@@ -26,12 +26,13 @@ const Product = mongoose.model('productDetails', cartItemSchema);
 let mongoCloudUrl= "mongodb+srv://orrin2op:RhQZLEvdtcaDR8P6@cluster0.f7bdlrn.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(mongoCloudUrl);
 
-app.get('/', (req, res) => {
-    res.render("home");
+const data = await Product.find({});
+app.get('/', async (req, res) => {
+    res.render("home",{data});
 });
 
-app.get('/home', (req, res) => {
-    res.render("home");
+app.get('/home', async (req, res) => {
+    res.render("home",{data});
 });
 
 app.get('/signup', (req, res) => {

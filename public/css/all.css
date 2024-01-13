@@ -117,6 +117,7 @@ body {
     display: flex;
     gap: 20px;
     font-size: 1.6rem;
+    position: relative;
 }
 
 .cart-user-container i {
@@ -487,3 +488,21 @@ body {
     height: 360px;
 }
 /* home page main section end */
+
+/* cart counter */
+.counter{
+    position: absolute;
+    bottom: -2px;
+    left: 20px;
+    height: 15px;
+    width: 15px;
+    background-color: #db4444;
+    color: white;
+    border-radius: 50%;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: none;
+}

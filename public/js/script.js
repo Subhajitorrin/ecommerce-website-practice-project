@@ -126,3 +126,14 @@
     }
 
 }
+
+// //  cart counter
+// document.addEventListener("DOMContentLoaded", function() {
+//     countCartItems()
+// });
+// function countCartItems(){
+//     let cart = document.querySelectorAll(".card");
+//     let cartCounter=document.querySelector(".counter");
+//     let count=cart.length;
+//     cartCounter.innerText=count;
+// }

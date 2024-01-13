@@ -14,32 +14,60 @@
         <!-- Banner -->
         <%- include('partials/banner') %>
 
-        <!-- Navbar -->
-        <%-include('partials/navbar') %>
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="nav-heading">
+                    <h2>E-Commerce Store</h2>
+                </div>
+                <div class="nav-icons">
+                    <i class='bx bx-x cross'></i>
+                    <ul class="nav-icons-ul">
+                        <li class="nav-icons-li "><a href="/home">Home</a></li>
+                        <li class="nav-icons-li"><a href="/contact">Contact</a></li>
+                        <li class="nav-icons-li"><a href="/about">About</a></li>
+                        <li class="nav-icons-li"><a href="/signup">Sign Up</a></li>
+                        <li class="nav-icons-li cart-profile"><a href="/cart">Cart</a></li>
+                        <li class="nav-icons-li cart-profile"><a href="/profile">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <div>
+                        <input type="search" name="navsearch" id="navsearch" placeholder="What are you looking for?">
+                        <i class='bx bx-search-alt-2 magnifier'></i>
+                    </div>
+                    <div class="cart-user-container">
+                        <div><a href="/cart"><i class='bx bx-cart'></i></a></div>   
+                        <div><a href="/login"><i class='bx bx-user'></i></a></i></div>
+                    </div>
+                </div>
+                <div class="nav-active-icons">
+                    <i class='bx bx-menu menu'></i>
+                </div>
+            </div>
 
-        <!-- Main Section -->
-        <div class="main">
-            <form class="form-container signup">
-                <!-- Form Content -->
-                <div>
-                    <h3>Create an account</h3>
-                    <p>Enter your details below</p>
-                </div>
-                <div><input type="text" name="name" id="name" placeholder="Name"></div>
-                <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
-                </div>
-                <div><input type="password" name="password" id="password" placeholder="Password"></div>
-                <div class="btn btn1"><button>Create Account</button></div>
-                <div class="btn btn2"><button><img src="../assets/googlelogo.png">Sign up with Google</button>
-                </div>
-                <div>
-                    <p>Already have account? <a href="/login" id="login">Log in</a></p>
-                </div>
-            </form>
-        </div>
+            <!-- Main Section -->
+            <div class="main">
+                <form class="form-container signup">
+                    <!-- Form Content -->
+                    <div>
+                        <h3>Create an account</h3>
+                        <p>Enter your details below</p>
+                    </div>
+                    <div><input type="text" name="name" id="name" placeholder="Name"></div>
+                    <div><input type="text" name="emailphone" id="emailphone" placeholder="Email or Phone number">
+                    </div>
+                    <div><input type="password" name="password" id="password" placeholder="Password"></div>
+                    <div class="btn btn1"><button>Create Account</button></div>
+                    <div class="btn btn2"><button><img src="../assets/googlelogo.png">Sign up with Google</button>
+                    </div>
+                    <div>
+                        <p>Already have account? <a href="/login" id="login">Log in</a></p>
+                    </div>
+                </form>
+            </div>
 
-        <!-- footer section -->
-        <%- include('partials/footer') %>
+            <!-- footer section -->
+            <%- include('partials/footer') %>
     </div>
 
     <script src="../js/script.js"></script>
