@@ -22,7 +22,7 @@
                     <div class="left" id="cartCardsParent">
 
                         <!-- cards start -->
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-img-name-container">
                                 <div class="card-img-container"><img
                                         src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
@@ -33,44 +33,22 @@
                                 <p class="price"><b>310INR</b></p>
                                 <div><i class='bx bx-x'></i></div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-name-container">
-                                <div class="card-img-container"><img
-                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
-                                        alt=""></div>
-                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
+                        </div> -->
+                        
+                        <% for(i=0;i<data.length;i++){ %>
+                            <div class="card">
+                                <div class="card-img-name-container">
+                                    <div class="card-img-container"><img
+                                            src="<%= data[i].imgSrc %>"
+                                            alt=""></div>
+                                    <div class="prodname"><%= data[i].productName %></div>
+                                </div>
+                                <div class="card-cross">
+                                    <p class="price"><b><%= data[i].price %> INR</b></p>
+                                    <div><i class='bx bx-x'></i></div>
+                                </div>
                             </div>
-                            <div class="card-cross">
-                                <p class="price"><b>120INR</b></p>
-                                <div><i class='bx bx-x'></i></div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-name-container">
-                                <div class="card-img-container"><img
-                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
-                                        alt=""></div>
-                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
-                            </div>
-                            <div class="card-cross">
-                                <p class="price"><b>340INR</b></p>
-                                <div><i class='bx bx-x'></i></div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-name-container">
-                                <div class="card-img-container"><img
-                                        src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71ShBw4g6GL._AC_UL320_.jpg"
-                                        alt=""></div>
-                                <div class="prodname">DHRUVI TRENDZ Men's Shirt</div>
-                            </div>
-                            <div class="card-cross">
-                                <p class="price"><b>320INR</b></p>
-                                <div><i class='bx bx-x'></i></div>
-                            </div>
-                        </div>
-
+                        <% } %>
                         <!-- cards end -->
                     </div>
                     <div class="right">

@@ -11,28 +11,47 @@ const publicPath = path.join(__dirname, './public');
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 
-const Product = mongoose.model('productDetails', {
+// Define the schema for the product details
+const cartItemSchema = new mongoose.Schema({
     imgSrc: String,
     productName: String,
     price: String
 });
-mongoose.connect('mongodb://localhost:27017/productDetails', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Create the Product model using the schema
+const Product = mongoose.model('productDetails', cartItemSchema);
+
+// mongoose.connect('mongodb://localhost:27017/productDetails', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/productDetails');
 
 app.get('/', (req, res) => {
     res.render("home");
 });
+
 app.get('/home', (req, res) => {
     res.render("home");
 });
+
 app.get('/signup', (req, res) => {
-    res.render('signup')
+    res.render('signup');
 });
+
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login');
 });
-app.get('/cart', (req, res) => {
-    res.render('cart')
+
+// Use the existing Product model to fetch data for the 'cart' route
+app.get('/cart', async (req, res) => {
+    try {
+        const data = await Product.find({});
+        console.log(data);
+        res.render('cart', { data});
+    } catch (error) {
+        console.error('Error fetching data from MongoDB:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });
+
 app.post("/db", async (req, res) => {
     try {
         // Extract data from the form submission
@@ -49,13 +68,14 @@ app.post("/db", async (req, res) => {
         await newProduct.save();
 
         // Respond with a success message or any other desired response
-        res.render('cart');
+        res.redirect('/');
     } catch (error) {
         // Handle errors
         console.error(error);
         res.status(500).send('Internal Server Error');
     }
 });
+
 app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
+    console.log(`App listening on port http://localhost:${port}`);
 });

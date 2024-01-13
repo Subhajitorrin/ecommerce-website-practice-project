@@ -12,7 +12,7 @@
     })
 }
 
-
+// priceCalculationOfCart();
 // price calculation
 {
     function priceCalculationOfCart() {
@@ -27,7 +27,7 @@
         totalPriceShow.innerHTML = `<b>${totalPrice}</b>`;
         shopingCostShow.innerHTML = `<b>${totalPrice}</b>`;
     }
-    // priceCalculationOfCart();
+    
 
     // remove card
     let cardCrossList = document.querySelectorAll('.card-cross')
