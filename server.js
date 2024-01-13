@@ -80,6 +80,16 @@ app.post("/db", async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+app.get('/cross/:id', async (req, res) => {
+    try {
+        const productId = req.params.id;
+        await Product.deleteOne({ _id: productId });
+        res.redirect("/cart")
+    } catch (error) {
+        console.error('Error deleting data from MongoDB:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 app.listen(port, () => {
     console.log(`App listening on port http://localhost:${port}`);

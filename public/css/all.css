@@ -446,6 +446,9 @@ body {
     font-size: 1.3rem;
     cursor: pointer;
 }
+.card-cross a{
+    color: black;
+}
 /* cart section end */
 
 /* home page main section */
