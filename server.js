@@ -22,7 +22,9 @@ const cartItemSchema = new mongoose.Schema({
 const Product = mongoose.model('productDetails', cartItemSchema);
 
 // mongoose.connect('mongodb://localhost:27017/productDetails', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect('mongodb://localhost:27017/productDetails');
+// mongoose.connect('mongodb://localhost:27017/productDetails');
+let mongoCloudUrl= "mongodb+srv://orrin2op:RhQZLEvdtcaDR8P6@cluster0.f7bdlrn.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(mongoCloudUrl);
 
 app.get('/', (req, res) => {
     res.render("home");
