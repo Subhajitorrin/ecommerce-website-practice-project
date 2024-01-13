@@ -23,16 +23,18 @@ const Product = mongoose.model('productDetails', cartItemSchema);
 
 // mongoose.connect('mongodb://localhost:27017/productDetails', { useNewUrlParser: true, useUnifiedTopology: true });
 // mongoose.connect('mongodb://localhost:27017/productDetails');
-let mongoCloudUrl= "mongodb+srv://orrin2op:RhQZLEvdtcaDR8P6@cluster0.f7bdlrn.mongodb.net/?retryWrites=true&w=majority"
+let mongoCloudUrl = "mongodb+srv://orrin2op:RhQZLEvdtcaDR8P6@cluster0.f7bdlrn.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(mongoCloudUrl);
 
-const data = await Product.find({});
+
 app.get('/', async (req, res) => {
-    res.render("home",{data});
+    const data = await Product.find({});
+    res.render("home", { data });
 });
 
 app.get('/home', async (req, res) => {
-    res.render("home",{data});
+    const data = await Product.find({});
+    res.render("home", { data });
 });
 
 app.get('/signup', (req, res) => {
@@ -48,7 +50,7 @@ app.get('/cart', async (req, res) => {
     try {
         const data = await Product.find({});
         // console.log(data);
-        res.render('cart', { data});
+        res.render('cart', { data });
     } catch (error) {
         console.error('Error fetching data from MongoDB:', error);
         res.status(500).send('Internal Server Error');
