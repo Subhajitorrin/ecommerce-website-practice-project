@@ -15,6 +15,9 @@
 // priceCalculationOfCart();
 // price calculation
 {
+    setTimeout(() => {
+        priceCalculationOfCart()
+    }, 1);
     function priceCalculationOfCart() {
         let price = document.querySelectorAll('.price');
         let totalPrice = 0
@@ -122,30 +125,4 @@
         return formElement;
     }
 
-}
-
-
-// add to cart
-{
-    function getDataOfHomeCards() {
-        let homeCards = document.querySelectorAll(".home-cards")
-        homeCards.forEach((card) => {
-            card.addEventListener('click', () => {
-                let details = getHomeProductDetails(card);
-                console.log(details);
-            })
-        })
-    }
-
-    // get img name price of home product
-    function getHomeProductDetails(card) {
-        var imgContainer = card.querySelector(".home-img-container");
-        var imgElement = imgContainer.querySelector("img");
-        var imgSrc = imgElement.src;
-
-        let name = card.querySelector(".home-product-name").innerText;
-
-        let price = card.querySelector(".home-product-price").innerText;
-        return { imgSrc, name, price };
-    }
 }

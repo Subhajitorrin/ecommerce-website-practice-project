@@ -44,7 +44,7 @@ app.get('/login', (req, res) => {
 app.get('/cart', async (req, res) => {
     try {
         const data = await Product.find({});
-        console.log(data);
+        // console.log(data);
         res.render('cart', { data});
     } catch (error) {
         console.error('Error fetching data from MongoDB:', error);
